@@ -1,0 +1,8 @@
+USE AdventureWorks2012;
+ GO 
+ 
+ SELECT P.ProductID,S.SalesOrderDetailID
+ FROM PRODUCTION.PRODUCT AS P
+ LEFT JOIN SALES.SALESORDERDETAIL AS S
+ ON P.ProductID=S.ProductID
+ WHERE S.SalesOrderDetailID IS NULL
